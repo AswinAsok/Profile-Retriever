@@ -43,6 +43,9 @@ const Display = ({ input }) => {
       .then((data) => {
         setUserdata(data);
         setCheckdata(true);
+        if(data.message){
+          setCheckdata(false);
+        }
       });
   };
 
@@ -61,6 +64,7 @@ const Display = ({ input }) => {
       </div>
 
       <div>
+
         {(() => {
           if (checkdata) {
             return (
@@ -111,6 +115,12 @@ const Display = ({ input }) => {
                 </CardContent>
               </Card>
             );
+          }else if(!checkdata && userdata.message){
+            return (
+              
+              <p className="username">Error Message: {userdata.message}</p>
+            )
+            
           }
         })()}
       </div>
