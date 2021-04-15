@@ -25,7 +25,11 @@ const useStyles = makeStyles({
 });
 
 const handleClick = (input) => {
-    console.log(input)
+    const username = input.input
+
+    fetch(`https://api.github.com/users/${username}`)
+    .then(res => res.json())
+    .then(data => console.log(data))
 }
 
 const Display = ({ input }) => {
@@ -40,7 +44,7 @@ const Display = ({ input }) => {
           className="btn-search"
           variant="outlined"
           color="primary"
-          onClick={handleClick({input})}
+          onClick={() => handleClick({input})}
         >
           Search
         </Button>
