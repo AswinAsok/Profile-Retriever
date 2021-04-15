@@ -1,4 +1,9 @@
 .display-container
 {
-    margin-top: 30px;
+    margin-top: 10px;
+}
+
+.searchbtn
+{
+    margin-bottom: 20px;
 }

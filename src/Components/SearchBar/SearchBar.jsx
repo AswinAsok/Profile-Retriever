@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
 import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
+
 
 const SearchBar = ({ setInput, input }) => {
-
 
 
   return (
@@ -21,16 +20,7 @@ const SearchBar = ({ setInput, input }) => {
       </div>
 
       <br />
-      <div className="searchbtn">
-        <Button
-          size="large"
-          className="btn-search"
-          variant="outlined"
-          color="primary"
-        >
-          Search
-        </Button>
-      </div>
+
     </div>
   );
 };
