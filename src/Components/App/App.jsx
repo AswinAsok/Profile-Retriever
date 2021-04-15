@@ -1,10 +1,16 @@
-import Header from '../Header/Header';
-import './App.css';
+import Header from "../Header/Header";
+import SearchBar from "../SearchBar/SearchBar";
+import "./App.css";
+
 
 function App() {
   return (
     <div className="App">
-      <Header />
+    
+        <Header />
+
+        <SearchBar />
+      
     </div>
   );
 }
