@@ -61,51 +61,59 @@ const Display = ({ input }) => {
       </div>
 
       <div>
-        <Card className={classes.root} variant="outlined">
-          <CardContent className="userdata">
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="center"
-            >
-              <Typography variant="h6" className={classes.title}>
-                Profile Details
-              </Typography>
-              <Avatar src={userdata.avatar_url} className={classes.large} />
-              <u>
-                <p className="username">{userdata.login}</p>
-              </u>
-              <p>{userdata.bio}</p>
-            </Grid>
+        {(() => {
+          if (checkdata) {
+            return (
+              <Card className={classes.root} variant="outlined">
+                <CardContent className="userdata">
+                  <Grid
+                    container
+                    direction="column"
+                    justify="center"
+                    alignItems="center"
+                  >
+                    <Typography variant="h6" className={classes.title}>
+                      Profile Details
+                    </Typography>
+                    <Avatar
+                      src={userdata.avatar_url}
+                      className={classes.large}
+                    />
+                    <u>
+                      <p className="username">{userdata.login}</p>
+                    </u>
+                    <p>{userdata.bio}</p>
+                  </Grid>
 
-            <Grid
-              container
-              direction="row"
-              justify="space-around"
-              alignItems="center"
-            >
-              <b>
-                <p>
-                  {userdata.followers}
-                  <br />
-                  <br />
-                  Followers
-                </p>
-              </b>
-              <b>
-                <p>
-                  {userdata.following}
-                  <br />
-                  <br />
-                  Following
-                </p>
-              </b>
-            </Grid>
-          </CardContent>
-        </Card>
+                  <Grid
+                    container
+                    direction="row"
+                    justify="space-around"
+                    alignItems="center"
+                  >
+                    <b>
+                      <p>
+                        {userdata.followers}
+                        <br />
+                        <br />
+                        Followers
+                      </p>
+                    </b>
+                    <b>
+                      <p>
+                        {userdata.following}
+                        <br />
+                        <br />
+                        Following
+                      </p>
+                    </b>
+                  </Grid>
+                </CardContent>
+              </Card>
+            );
+          }
+        })()}
       </div>
-    
     </div>
   );
 };
