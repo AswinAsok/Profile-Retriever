@@ -1,9 +1,21 @@
 .display-container
 {
     margin-top: 10px;
+
 }
 
 .searchbtn
 {
     margin-bottom: 20px;
+
 }
+
+.userdata{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.username{
+    font-size: larger;
+    font-weight: 900;
+}
+
