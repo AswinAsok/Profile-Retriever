@@ -23,7 +23,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Display = () => {
+const Display = ({input}) => {
   const classes = useStyles();
 
   return (
@@ -35,6 +35,8 @@ const Display = () => {
           </Typography>
         </CardContent>
       </Card>
+
+     
     </div>
   );
 };

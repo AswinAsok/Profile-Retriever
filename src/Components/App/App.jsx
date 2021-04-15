@@ -7,11 +7,7 @@ import "./App.css";
 
 function App() {
 
-  const[input, setInput] = useState('Hello')
-
-  // const handleupdate = (event) => {
-  //   setInput(e.target.value)
-  // }
+  const[input, setInput] = useState('')
 
   return (
     <div className="App">
@@ -20,7 +16,7 @@ function App() {
 
         <SearchBar setInput={setInput} input={input} />
 
-        <Display />
+        <Display input={input}/>
       
     </div>
   );

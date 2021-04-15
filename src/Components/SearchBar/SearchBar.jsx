@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./SearchBar.css";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
-
 const SearchBar = ({ setInput, input }) => {
 
-  
+
 
   return (
     <div className="searchbar-container">
-
-      <div className = "searchbar">
+      <div className="searchbar">
         <TextField
           required
           id="outlined-required"
@@ -21,20 +19,18 @@ const SearchBar = ({ setInput, input }) => {
           onChange={(event) => setInput(event.target.value)}
         />
       </div>
-      
-      <br/>
-      <p>This is your Input {input}</p>
-      <div className = "searchbtn">
-      <Button
-        size="large"
-        className="btn-search"
-        variant="outlined"
-        color="primary"
-      >
-        Search
-      </Button>
-      </div>
 
+      <br />
+      <div className="searchbtn">
+        <Button
+          size="large"
+          className="btn-search"
+          variant="outlined"
+          color="primary"
+        >
+          Search
+        </Button>
+      </div>
     </div>
   );
 };
