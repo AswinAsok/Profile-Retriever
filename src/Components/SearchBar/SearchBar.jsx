@@ -4,9 +4,9 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
 
-const SearchBar = () => {
+const SearchBar = ({ setInput, input }) => {
 
-  const[input, setInput] = useState('')
+  
 
   return (
     <div className="searchbar-container">
@@ -23,7 +23,7 @@ const SearchBar = () => {
       </div>
       
       <br/>
-      
+      <p>This is your Input {input}</p>
       <div className = "searchbtn">
       <Button
         size="large"
