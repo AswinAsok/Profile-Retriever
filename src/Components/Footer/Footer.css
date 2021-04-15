@@ -1,0 +1,13 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}

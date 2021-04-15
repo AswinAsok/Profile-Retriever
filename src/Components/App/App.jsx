@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Display from "../Display/Display";
+import Footer from '../Footer/Footer';
 import Header from "../Header/Header";
 import SearchBar from "../SearchBar/SearchBar";
 import "./App.css";
@@ -17,6 +18,8 @@ function App() {
         <SearchBar setInput={setInput} input={input} />
 
         <Display input={input}/>
+
+        <Footer />
       
     </div>
   );

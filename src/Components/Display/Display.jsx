@@ -121,7 +121,7 @@ const Display = ({ input }) => {
               <p className="username">Error Message: {userdata.message}</p>
             )
             
-          }
+          } 
         })()}
       </div>
     </div>
