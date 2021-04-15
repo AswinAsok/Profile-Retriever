@@ -6,6 +6,8 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import Avatar from '@material-ui/core/Avatar';
+
 
 const useStyles = makeStyles({
   root: {
@@ -24,27 +26,31 @@ const useStyles = makeStyles({
   },
 });
 
-const handleClick = (input) => {
-    const username = input.input
-
-    fetch(`https://api.github.com/users/${username}`)
-    .then(res => res.json())
-    .then(data => console.log(data))
-}
-
 const Display = ({ input }) => {
   const classes = useStyles();
+  const [userdata, setUserdata] = useState({});
+  const [checkdata, setCheckdata] =useState(false)
+
+  const handleClick = (input) => {
+    const username = input.input;
+
+    fetch(`https://api.github.com/users/${username}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setUserdata(data);
+        setCheckdata(true)
+      });
+  };
 
   return (
     <div className="display-container">
-
       <div className="searchbtn">
         <Button
           size="large"
           className="btn-search"
           variant="outlined"
           color="primary"
-          onClick={() => handleClick({input})}
+          onClick={() => handleClick({ input })}
         >
           Search
         </Button>
@@ -57,6 +63,7 @@ const Display = ({ input }) => {
           </Typography>
         </CardContent>
       </Card>
+      
     </div>
   );
 };
