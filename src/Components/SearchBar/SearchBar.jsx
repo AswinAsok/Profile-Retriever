@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./SearchBar.css";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
+
 const SearchBar = () => {
+
+  const[input, setInput] = useState('')
+
   return (
     <div className="searchbar-container">
 
@@ -13,9 +17,13 @@ const SearchBar = () => {
           id="outlined-required"
           label="Github Username"
           variant="outlined"
+          value={input}
+          onChange={(event) => setInput(event.target.value)}
         />
       </div>
+      
       <br/>
+      
       <div className = "searchbtn">
       <Button
         size="large"
